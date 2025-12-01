@@ -1,0 +1,25 @@
+<!-- pages/login/login.wxml -->
+<view class="container">
+  <view class="logo-container">
+    <view class="logo-bg">
+      <icon type="search" size="48" color="white"></icon>
+    </view>
+    <text class="app-name">FitLife 健身</text>
+    <text class="app-subtitle">专业的会员运动管理助手</text>
+  </view>
+
+  <view class="btn-container">
+    <button
+      class="login-btn"
+      bindtap="handleWeChatLogin"
+      disabled="{{loading}}"
+    >
+      <image class="wechat-icon" src="/images/profile.png"></image>
+      {{loading ? '授权登录中...' : '微信一键登录'}}
+    </button>
+  </view>
+
+  <view class="agreement">
+    <text class="agreement-text">登录即代表您同意《用户服务协议》与《隐私政策》</text>
+  </view>
+</view>

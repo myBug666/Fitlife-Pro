@@ -1,0 +1,137 @@
+.container {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  padding: 20rpx;
+}
+
+/* 统计卡片 */
+.stats-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+
+.stat-card {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  padding: 30rpx 20rpx;
+  margin: 0 10rpx;
+  text-align: center;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.stat-value {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #07c160;
+  margin-bottom: 10rpx;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+/* 月份选择器 */
+.month-picker {
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  padding: 20rpx 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.picker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333333;
+  font-size: 28rpx;
+}
+
+/* 图表区域 */
+.charts-section {
+  margin-bottom: 30rpx;
+}
+
+.chart-card {
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.chart-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+
+/* 近期活动 */
+.recent-activities {
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+
+.activities-list {
+  max-height: 500rpx;
+  overflow-y: auto;
+}
+
+.activity-item {
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #f0f9ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-title {
+  font-size: 26rpx;
+  color: #333333;
+  margin-bottom: 6rpx;
+}
+
+.activity-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+  color: #999999;
+}
+
+/* 空状态 */
+.empty-state {
+  padding: 40rpx 0;
+  text-align: center;
+  color: #999999;
+  font-size: 24rpx;
+}

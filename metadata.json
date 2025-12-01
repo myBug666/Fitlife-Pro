@@ -1,0 +1,5 @@
+{
+  "name": "FitLife Pro",
+  "description": "一个健身会员管理小程序，包含课程预约、体测数据 AI 分析及会员个人中心管理功能。",
+  "requestFramePermissions": []
+}

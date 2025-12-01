@@ -1,0 +1,168 @@
+.container {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.welcome-bar {
+  padding: 20rpx 30rpx;
+  background-color: #ffffff;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.welcome-text {
+  font-size: 28rpx;
+  color: #333333;
+}
+
+/* 日期选择器 */
+.date-picker {
+  background-color: #32CD32;
+  margin-bottom: 20rpx;
+}
+
+.date-list {
+  display: flex;
+  padding: 20rpx 10rpx;
+}
+
+.date-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16rpx 30rpx;
+  margin: 0 10rpx;
+  border-radius: 8rpx;
+  min-width: 90rpx;
+  color: white;
+}
+
+.date-item.active {
+  background-color: white;
+  color: #32CD32;
+  font-weight: bold;
+}
+
+.date-week {
+  font-size: 24rpx;
+  margin-bottom: 8rpx;
+}
+
+.date-number {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+/* 课程列表 */
+.course-list {
+  padding: 20rpx;
+  height: calc(100vh - 260rpx);
+}
+
+.course-card {
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.course-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333333;
+}
+
+.course-status {
+  display: flex;
+  align-items: center;
+}
+
+.status-dot {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  margin-right: 8rpx;
+}
+
+.status-dot.active {
+  background-color: #ff4d4f;
+}
+
+.status-dot.inactive {
+  background-color: #52c41a;
+}
+
+.status-text {
+  font-size: 22rpx;
+  color: #999999;
+}
+
+.course-details {
+  margin-bottom: 20rpx;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+
+.detail-item text {
+  font-size: 26rpx;
+  color: #666666;
+  margin-left: 10rpx;
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-capacity {
+  font-size: 24rpx;
+  color: #999999;
+  background-color: #f5f5f5;
+  padding: 4rpx 12rpx;
+  border-radius: 16rpx;
+}
+
+.book-btn {
+  min-width: 160rpx;
+  height: 64rpx;
+  background-color: #FF6347;
+  color: white;
+  font-size: 26rpx;
+  border-radius: 32rpx;
+  padding: 0;
+}
+
+.book-btn::after {
+  border: none;
+}
+
+.book-btn.booked {
+  background-color: #cccccc;
+}
+
+/* 空状态 */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100rpx 0;
+  color: #999999;
+}
+
+.empty-text {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}

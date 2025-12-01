@@ -1,0 +1,57 @@
+<!-- pages/profile/profile.wxml -->
+<view class="container">
+  <!-- 用户信息卡片 -->
+  <view class="user-card">
+    <view class="avatar-section" bindtap="handleEditAvatar">
+      <image class="avatar" src="{{user && user.avatarUrl ? user.avatarUrl : '/images/profile.png'}}"></image>
+      <view class="edit-icon">
+        <icon type="edit" size="16" color="white"></icon>
+      </view>
+    </view>
+    
+    <view class="user-info">
+      <view class="name-section">
+        <text class="user-name text-title">{{user && user.nickname ? user.nickname : '未设置昵称'}}</text>
+        <text class="user-level">{{membershipInfo.level}}</text>
+      </view>
+      <text class="user-id text-comment">会员ID: {{user && user.id ? user.id : '-'}}</text>
+    </view>
+  </view>
+
+  <!-- 会员信息卡片 -->
+  <view class="membership-card">
+    <view class="membership-header">
+      <text class="card-title text-title">会员信息</text>
+      <text class="card-actions">续费</text>
+    </view>
+    
+    <view class="membership-details">
+      <view class="detail-item">
+        <text class="detail-label text-comment">到期时间</text>
+        <text class="detail-value">{{membershipInfo.expireDate}}</text>
+      </view>
+      <view class="detail-item">
+        <text class="detail-label text-comment">剩余天数</text>
+        <text class="detail-value highlight">{{membershipInfo.remainingDays}}天</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 设置列表 -->
+  <view class="settings-list">
+    <view wx:for="{{settings}}" wx:key="id" class="setting-item" data-id="{{item.id}}" bindtap="handleSettingClick">
+      <view class="setting-left">
+        <icon type="{{item.icon}}" size="24" color="#666"></icon>
+        <text class="setting-title">{{item.title}}</text>
+      </view>
+      <view class="setting-right" wx:if="{{item.showArrow}}">
+        <icon type="arrowright" size="24" color="#ccc"></icon>
+      </view>
+    </view>
+  </view>
+
+  <!-- 退出登录按钮 -->
+  <view class="logout-section">
+    <button class="logout-btn" bindtap="handleLogout">退出登录</button>
+  </view>
+</view>

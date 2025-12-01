@@ -1,0 +1,75 @@
+<!-- pages/booking/booking.wxml -->
+<view class="container">
+  <!-- 欢迎信息 -->
+  <view class="welcome-bar">
+    <text class="welcome-text">您好，{{user && user.nickname ? user.nickname : '会员'}}</text>
+  </view>
+
+  <!-- 日期选择器 -->
+  <scroll-view scroll-x class="date-picker">
+    <view class="date-list">
+      <view
+        wx:for="{{dates}}"
+        wx:key="full"
+        class="date-item {{selectedDate === item.full ? 'active' : ''}}"
+        data-date="{{item.full}}"
+        bindtap="onDateSelect"
+      >
+        <text class="date-week">{{item.day}}</text>
+        <text class="date-number">{{item.date}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 课程列表 -->
+  <scroll-view class="course-list" scroll-y>
+    <block wx:if="{{courses.length > 0}}">
+      <view
+        wx:for="{{courses}}"
+        wx:key="id"
+        class="course-card"
+      >
+        <view class="course-info">
+          <view class="course-header">
+      <text class="course-name text-title">{{item.name}}</text>
+            <view class="course-status">
+              <text class="status-dot {{item.booked ? 'active' : 'inactive'}}"></text>
+              <text class="status-text text-comment">{{item.booked ? '已满' : '可预约'}}</text>
+            </view>
+          </view>
+          
+          <view class="course-details">
+            <view class="detail-item">
+              <icon type="time" size="18" color="#666"></icon>
+              <text>{{item.timeStart}} - {{item.timeEnd}}</text>
+            </view>
+            <view class="detail-item">
+              <icon type="location" size="18" color="#666"></icon>
+              <text>{{item.room}}</text>
+            </view>
+            <view class="detail-item">
+              <icon type="person" size="18" color="#666"></icon>
+              <text>{{item.trainer}}</text>
+            </view>
+          </view>
+
+          <view class="course-footer">
+            <text class="course-capacity">
+              已预约: {{item.bookedCount}}/{{item.capacity}}
+            </text>
+            <button
+              class="book-btn {{myBookings.has(item.id) ? 'booked' : ''}}"
+              disabled="{{item.booked || myBookings.has(item.id)}}">
+              {{myBookings.has(item.id) ? '已预约' : '立即预约'}}
+            </button>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <view wx:else class="empty-state">
+      <icon type="waiting" size="60" color="#ccc"></icon>
+      <text class="empty-text">暂无可用课程</text>
+    </view>
+  </scroll-view>
+</view>

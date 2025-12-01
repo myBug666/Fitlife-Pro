@@ -1,0 +1,93 @@
+/* app.wxss */
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px; /* 默认字体大小16px */
+  color: #333333;
+  background-color: #f7f8fa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  padding-bottom: 64px; /* 为tabBar留出空间 */
+}
+
+/* 通用样式 */
+.text-primary {
+  color: #32CD32;
+}
+
+.text-secondary {
+  color: #FF6347;
+}
+
+.text-gray-400 {
+  color: #969799;
+}
+
+.text-gray-500 {
+  color: #666666;
+}
+
+.text-gray-700 {
+  color: #333333;
+}
+
+/* 标题样式 - 20px */
+.text-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* 注释样式 - 12px */
+.text-comment {
+  font-size: 12px;
+  color: #969799;
+}
+
+.bg-white {
+    background-color: #ffffff;
+  }
+
+.bg-gray-50 {
+  background-color: #f7f8fa;
+}
+
+/* 按钮样式 */
+.btn-primary {
+  background-color: #32CD32;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.btn-secondary {
+  background-color: #FF6347;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 8px 16px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 12px;
+}
+
+/* 阴影 */
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
